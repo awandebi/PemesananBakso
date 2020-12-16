@@ -32,7 +32,7 @@
                     android:layout_gravity="center"
                     android:background="@color/red"
                     />
-            </LinearLayout>
+
             //------------------------------------------------------------------------
             <View
                 android:layout_marginTop="10dp"
@@ -47,6 +47,7 @@
                 android:textSize="25sp"
                 android:layout_gravity="center"
                 android:background="@color/yellow" />
+            </LinearLayout>
             //------------------------------------------------------------------------
             <View
                 android:layout_marginTop="10dp"
@@ -54,11 +55,15 @@
                 android:layout_height="2dp"
                 android:background="@color/colorAccent"/>
             //------------------------------------------------------------------------
+
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
+                //-----------------------------------------------------------------------
+                //baris ke 1 menu ke 1
                 <CheckBox
+
                     android:id="@+id/tmanis"
                     android:layout_width="match_parent"
                     android:layout_height="33dp"
@@ -67,34 +72,26 @@
                     android:text="Iced tea"
                     android:textSize="20sp" />
 
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="55dp"
-                    android:src="@drawable/teh"
-                    android:visibility="visible" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Rp.15.000,-"
-                    android:textSize="20sp" />
+                //-----------------------------------------------------------------------
+                // baris ke 1 select jumlah pesan menu ke 1
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
+
                     <Button
+
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:id="@+id/in1"
                         android:onClick="increment1"
                         android:visibility="gone"
-
                         android:text="+"
                         />
 
                     <TextView
+
                         android:id="@+id/quantity_teh"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -107,6 +104,7 @@
                         android:visibility="gone"/>
 
                     <Button
+
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:id="@+id/dec1"
@@ -114,28 +112,19 @@
                         android:visibility="gone"
                         android:text="-" />
                 </LinearLayout>
-            </TableRow>
-            //------------------------------------------------------------------------
-            <TableRow android:orientation="horizontal">
+
+                //-----------------------------------------------------------------------
+                //baris ke 1 menu ke 2
                 <CheckBox
                     android:id="@+id/tLeci"
                     android:layout_width="match_parent"
                     android:layout_height="33dp"
-                    android:layout_column="1"
                     android:layout_marginTop="20dp"
                     android:text="Lechi Tea"
                     android:textSize="20sp" />
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="55dp"
-                    android:src="@drawable/leciteamenu"
-                    android:visibility="visible" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Rp.25.000,-"
-                    android:textSize="20sp" />
+
+                //-----------------------------------------------------------------------
+                // baris ke 1 select jumlah pesan menu ke 2
 
 
                 <LinearLayout
@@ -144,6 +133,7 @@
                     android:orientation="horizontal">
 
                     <Button
+
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:onClick="increment2"
@@ -153,6 +143,7 @@
                         android:text="+" />
 
                     <TextView
+
                         android:id="@+id/quantity_leci"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -165,6 +156,7 @@
                         android:visibility="gone"/>
 
                     <Button
+
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:id="@+id/dec2"
@@ -172,9 +164,82 @@
                         android:visibility="gone"
                         android:text="-" />
                 </LinearLayout>
+
+                //------------------------------------------------------------------------
+
             </TableRow>
             //------------------------------------------------------------------------
-            <TableRow android:orientation="horizontal">
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorAccent"/>
+            //------------------------------------------------------------------------
+            //------------------------------------------------------------------------
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                //-----------------------------------------------------------------------
+                // baris ke 2 gambar menu ke 1
+                <ImageView
+                    android:layout_column="1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/teh"
+                    android:visibility="visible" />
+                //-----------------------------------------------------------------------
+                // baris ke 2 gambar menu ke 2
+                <ImageView
+                    android:layout_column="3"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/leciteamenu"
+                    android:visibility="visible" />
+                //-----------------------------------------------------------------------
+            </TableRow>
+
+            //-----------------------------------------------------------------------
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                //-----------------------------------------------------------------------
+                // baris ke 3 harga menu ke 1
+                <TextView
+                    android:layout_column="1"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Rp.15.000,-"
+                    android:textSize="20sp" />
+                //-----------------------------------------------------------------------
+                // baris ke 3 harga menu ke 2
+                <TextView
+                    android:layout_column="3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Rp.25.000,-"
+                    android:textSize="20sp" />
+                //-----------------------------------------------------------------------
+            </TableRow>
+            //------------------------------------------------------------------------
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorAccent"/>
+            //------------------------------------------------------------------------
+            //-----------------------------------------------------------------------
+
+            //------------------------------------------------------------------------
+         //pilihan menu selanjutnya..... per 2 kolom
+            //------------------------------------------------------------------------
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                //-----------------------------------------------------------------------
+                //baris ke 4 menu ke 3
 
                 <CheckBox
                     android:id="@+id/tLemon"
@@ -184,19 +249,8 @@
                     android:layout_marginTop="20dp"
                     android:text="Lemone Tea"
                     android:textSize="20sp" />
-
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="55dp"
-                    android:src="@drawable/lemonteamenu"
-                    android:visibility="visible" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Rp.25.000,-"
-                    android:textSize="20sp" />
+                //-----------------------------------------------------------------------
+                // baris ke 4 select jumlah pesan menu ke 3
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -232,33 +286,17 @@
                         android:onClick="decrement3"
                         android:text="-" />
                 </LinearLayout>
-            </TableRow>
-            //------------------------------------------------------------------------
-            <TableRow android:orientation="horizontal">
-
+                //-----------------------------------------------------------------------
+                //baris ke 4 menu ke 4
                 <CheckBox
                     android:id="@+id/mShake"
                     android:layout_width="match_parent"
                     android:layout_height="33dp"
-                    android:layout_column="1"
                     android:layout_marginTop="20dp"
                     android:text="Milk Shake"
                     android:textSize="20sp" />
-
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="55dp"
-                    android:src="@drawable/milkshakemenu"
-                    android:visibility="visible" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Rp.45.000,-"
-                    android:textSize="20sp" />
-
-
+                //-----------------------------------------------------------------------
+                // baris ke 4 select jumlah pesan menu ke 4
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -293,10 +331,87 @@
                         android:visibility="gone"
                         android:text="-" />
                 </LinearLayout>
+                //-----------------------------------------------------------------------
+            </TableRow>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorAccent"/>
+            //------------------------------------------------------------------------
+            //------------------------------------------------------------------------
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            //-----------------------------------------------------------------------
+            // baris ke 5 gambar menu ke 3
+
+                <ImageView
+                    android:layout_column="1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/lemonteamenu"
+                    android:visibility="visible" />
+            //-----------------------------------------------------------------------
+            // baris ke 5 gambar menu ke 4
+            <ImageView
+                android:layout_column="3"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/milkshakemenu"
+                android:visibility="visible" />
+                //-----------------------------------------------------------------------
+
+            </TableRow>
+
+
+            //------------------------------------------------------------------------
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                //-----------------------------------------------------------------------
+                // baris ke 6 harga menu ke 3
+                <TextView
+                    android:layout_column="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Rp.25.000,-"
+                    android:textSize="20sp" />
+                //-----------------------------------------------------------------------
+                // baris ke 6 harga menu ke 4
+
+                <TextView
+                    android:layout_column="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Rp.45.000,-"
+                    android:textSize="20sp" />
+
+                //------------------------------------------------------------------------
+
             </TableRow>
             //------------------------------------------------------------------------
-            <TableRow android:orientation="horizontal">
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorAccent"/>
+            //------------------------------------------------------------------------
+            //-----------------------------------------------------------------------
 
+            //------------------------------------------------------------------------
+            //pilihan menu selanjutnya..... per 2 kolom
+            //------------------------------------------------------------------------
+
+            //------------------------------------------------------------------------
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                //------------------------------------------------------------------------
+                //baris ke 7 menu ke 5
                 <CheckBox
                     android:id="@+id/Mineral"
                     android:layout_width="match_parent"
@@ -306,18 +421,10 @@
                     android:text="Mineral Water"
                     android:textSize="20sp" />
 
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="55dp"
-                    android:src="@drawable/mineralwatermenu"
-                    android:visibility="visible" />
+                //-----------------------------------------------------------------------
+                // baris ke 7 select jumlah pesan menu ke 5
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Rp.5.000,-"
-                    android:textSize="20sp" />
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -353,7 +460,9 @@
                         android:id="@+id/dec5"
                         android:visibility="gone"/>
                 </LinearLayout>
-            </TableRow>
+                //------------------------------------------------------------------------
+                </TableRow>
+            //------------------------------------------------------------------------
             //------------------------------------------------------------------------
             <View
                 android:layout_marginTop="10dp"
@@ -361,6 +470,67 @@
                 android:layout_height="2dp"
                 android:background="@color/colorAccent"/>
             //------------------------------------------------------------------------
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                //------------------------------------------------------------------------
+                // baris ke 8 gambar menu ke 5
+                <ImageView
+                    android:layout_column="1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/mineralwatermenu"
+                    android:visibility="visible" />
+
+                //------------------------------------------------------------------------
+            </TableRow>
+            //------------------------------------------------------------------------
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                //------------------------------------------------------------------------
+                // baris ke 9 harga menu ke 5
+                <TextView
+                    android:layout_column="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Rp.5.000,-"
+                    android:textSize="20sp" />
+
+                //------------------------------------------------------------------------
+            </TableRow>
+            //------------------------------------------------------------------------
+            //------------------------------------------------------------------------
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorAccent"/>
+            //------------------------------------------------------------------------
+
+            //------------------------------------------------------------------------
+            //-----------------------------------------------------------------------
+
+            //------------------------------------------------------------------------
+            //pilihan menu selanjutnya..... per 2 kolom
+            //------------------------------------------------------------------------
+
+            //------------------------------------------------------------------------
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorAccent"/>
+            //------------------------------------------------------------------------
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -368,6 +538,7 @@
                 android:textSize="25sp"
                 android:layout_gravity="center"
                 android:background="@color/yellow" />
+            </LinearLayout>
             //------------------------------------------------------------------------
             <View
                 android:layout_marginTop="10dp"
@@ -375,11 +546,12 @@
                 android:layout_height="2dp"
                 android:background="@color/colorAccent"/>
             //------------------------------------------------------------------------
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
-
+                //------------------------------------------------------------------------
                 <CheckBox
                     android:id="@+id/MieAym"
                     android:layout_width="match_parent"
@@ -389,20 +561,7 @@
                     android:text="Chicken Noddle "
                     android:textSize="20sp" />
 
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="55dp"
-                    android:src="@drawable/mieayammenu"
-                    android:visibility="visible" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Rp.35.000,-"
-                    android:textSize="20sp" />
-
-
+                //------------------------------------------------------------------------
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -436,32 +595,16 @@
                         android:id="@+id/dec6"
                         android:visibility="gone"/>
                 </LinearLayout>
-            </TableRow>
-            //------------------------------------------------------------------------
-            <TableRow android:orientation="horizontal">
-
+                //------------------------------------------------------------------------
+                //------------------------------------------------------------------------
                 <CheckBox
                     android:id="@+id/MiePangsit"
                     android:layout_width="match_parent"
                     android:layout_height="33dp"
-                    android:layout_column="1"
                     android:layout_marginTop="20dp"
                     android:text="Pangsit Noddle"
                     android:textSize="20sp" />
-
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="55dp"
-                    android:src="@drawable/mieayampangsitmenu"
-                    android:visibility="visible" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Rp.45.000,-"
-                    android:textSize="20sp" />
-
+                //------------------------------------------------------------------------
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -496,9 +639,94 @@
                         android:id="@+id/dec7"
                         android:visibility="gone"/>
                 </LinearLayout>
+                //------------------------------------------------------------------------
+                //------------------------------------------------------------------------
             </TableRow>
             //------------------------------------------------------------------------
-            <TableRow android:orientation="horizontal">
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorAccent"/>
+            //------------------------------------------------------------------------
+
+            //------------------------------------------------------------------------
+            /------------------------------------------------------------------------
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                //------------------------------------------------------------------------
+
+                <ImageView
+                    android:layout_column="1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/mieayammenu"
+                    android:visibility="visible" />
+
+                //------------------------------------------------------------------------
+                <ImageView
+                    android:layout_column="3"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/mieayampangsitmenu"
+                    android:visibility="visible" />
+                //------------------------------------------------------------------------
+                //------------------------------------------------------------------------
+
+            </TableRow>
+            /------------------------------------------------------------------------
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                //------------------------------------------------------------------------
+                <TextView
+                    android:layout_column="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Rp.45.000,-"
+                    android:textSize="20sp" />
+
+                //------------------------------------------------------------------------
+                <TextView
+                    android:layout_column="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Rp.35.000,-"
+                    android:textSize="20sp" />
+
+
+            </TableRow>
+
+            //------------------------------------------------------------------------
+            //------------------------------------------------------------------------
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorAccent"/>
+            //------------------------------------------------------------------------
+
+            //------------------------------------------------------------------------
+            //-----------------------------------------------------------------------
+
+            //------------------------------------------------------------------------
+            //pilihan menu selanjutnya..... per 2 kolom
+            //------------------------------------------------------------------------
+
+            //------------------------------------------------------------------------
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                //------------------------------------------------------------------------
 
                 <CheckBox
                     android:id="@+id/BaksoUrat"
@@ -508,21 +736,7 @@
                     android:layout_marginTop="20dp"
                     android:text="MeatBall"
                     android:textSize="20sp" />
-
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="55dp"
-                    android:src="@drawable/basouratmenu"
-                    android:visibility="visible" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Rp.45.000,-"
-                    android:textSize="20sp" />
-
-
+                //------------------------------------------------------------------------
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -557,35 +771,16 @@
                         android:id="@+id/dec8"
                         android:visibility="gone"/>
                 </LinearLayout>
-            </TableRow>
-            //------------------------------------------------------------------------
-            <TableRow
-                android:orientation="horizontal">
-
+                //------------------------------------------------------------------------
                 <CheckBox
                     android:id="@+id/BakTelur"
                     android:layout_width="match_parent"
                     android:layout_height="33dp"
-                    android:layout_column="1"
+
                     android:layout_marginTop="20dp"
                     android:text="Egg MeatBall"
                     android:textSize="20sp" />
-
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="55dp"
-                    android:src="@drawable/basotelurmenu"
-                    android:visibility="visible" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Rp.45.000,-"
-                    android:textSize="20sp" />
-
-
-
+                //------------------------------------------------------------------------
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -620,12 +815,98 @@
                         android:id="@+id/dec9"
                         android:visibility="gone"/>
                 </LinearLayout>
+                //------------------------------------------------------------------------
+
+                //------------------------------------------------------------------------
+
             </TableRow>
+            //------------------------------------------------------------------------
+            //------------------------------------------------------------------------
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorAccent"/>
+            //------------------------------------------------------------------------
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                //------------------------------------------------------------------------
+
+                <ImageView
+                    android:layout_column="1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/basouratmenu"
+                    android:visibility="visible" />
+                //------------------------------------------------------------------------
+
+                <ImageView
+                    android:layout_column="3"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/basotelurmenu"
+                    android:visibility="visible" />
+                //------------------------------------------------------------------------
+                //------------------------------------------------------------------------
+            </TableRow>
+            //------------------------------------------------------------------------
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                //------------------------------------------------------------------------
+
+                <TextView
+                    android:layout_column="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Rp.45.000,-"
+                    android:textSize="20sp" />
+                //------------------------------------------------------------------------
+
+                <TextView
+                    android:layout_column="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Rp.45.000,-"
+                    android:textSize="20sp" />
+
+                //------------------------------------------------------------------------
+                //------------------------------------------------------------------------
+
+            </TableRow>
+            //------------------------------------------------------------------------
+            //------------------------------------------------------------------------
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorAccent"/>
+            //------------------------------------------------------------------------
+
+
+            //------------------------------------------------------------------------
+            //pilihan menu selanjutnya..... per 2 kolom
+            //------------------------------------------------------------------------
+
+            //------------------------------------------------------------------------
+
+
 
             //------------------------------------------------------------------------
             <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
+                //------------------------------------------------------------------------
                 <CheckBox
 
                     android:id="@+id/BaksoAnak"
@@ -636,19 +917,7 @@
                     android:text="Pregnant MeatBall"
                     android:textSize="20sp" />
 
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="55dp"
-                    android:src="@drawable/basoberanakmenu"
-                    android:visibility="visible" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Rp.90.000,-"
-                    android:textSize="20sp" />
-
+                //------------------------------------------------------------------------
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -683,6 +952,53 @@
                         android:id="@+id/dec10"
                         android:visibility="gone"/>
                 </LinearLayout>
+
+
+
+                //------------------------------------------------------------------------
+
+
+            </TableRow>
+            //------------------------------------------------------------------------
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorAccent"/>
+
+            //------------------------------------------------------------------------
+
+           //------------------------------------------------------------------------
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                //------------------------------------------------------------------------
+
+                <ImageView
+                    android:layout_column="1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/basoberanakmenu"
+                    android:visibility="visible" />
+            //------------------------------------------------------------------------
+            </TableRow>
+            //------------------------------------------------------------------------
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                //------------------------------------------------------------------------
+
+                <TextView
+                    android:layout_column="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Rp.90.000,-"
+                    android:textSize="20sp" />
+
 
 
             </TableRow>
@@ -784,19 +1100,31 @@
             </TableRow>
 
             //------------------------------------------------------------------------
-            <LinearLayout
+
+            //------------------------------------------------------------------------
+            <View
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="2dp"
+                android:background="@color/colorAccent"/>
+
+            //------------------------------------------------------------------------
+
+            <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
                 <TextView
+                    android:layout_column="3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="JUMLAH PEMBAYARAN"
+                    android:text="Total Harga Pesanan"
                     android:textSize="35sp"
                     android:layout_gravity="center"
-                    android:background="@color/red"
+
                     />
                 <TextView
+                    android:layout_column="4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Rp 0,-"
@@ -804,7 +1132,111 @@
                     android:layout_gravity="center"
                     android:id="@+id/jumlahbayar"
                     />
-            </LinearLayout>
+            </TableRow>
+
+            //------------------------------------------------------------------------
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_column="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PPN 10%"
+                    android:textSize="35sp"
+                    android:layout_gravity="center"
+
+                    />
+                <TextView
+                    android:layout_column="4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 0,-"
+                    android:textSize="35sp"
+                    android:layout_gravity="center"
+                    android:id="@+id/ppn"
+                    />
+            </TableRow>
+            //------------------------------------------------------------------------
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_column="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="total Bayar"
+                    android:textSize="35sp"
+                    android:layout_gravity="center"
+
+                    />
+                <TextView
+                    android:layout_column="4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 0,-"
+                    android:textSize="35sp"
+                    android:layout_gravity="center"
+                    android:id="@+id/ttl"
+                    />
+            </TableRow>
+            //------------------------------------------------------------------------
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_column="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pembayaran"
+                    android:textSize="35sp"
+                    android:layout_gravity="center"
+
+                    />
+                <EditText
+                    android:id="@+id/pembyr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/angka_hint"
+                    android:inputType="number" />
+
+            </TableRow>
+            //------------------------------------------------------------------------
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_column="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kembali"
+                    android:textSize="35sp"
+                    android:layout_gravity="center"
+
+                    />
+                <TextView
+                    android:layout_column="4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 0,-"
+                    android:textSize="35sp"
+                    android:layout_gravity="center"
+                    android:id="@+id/kmbl"
+                    />
+            </TableRow>
+
+
+            //------------------------------------------------------------------------
+
+
+            //------------------------------------------------------------------------
+
+            //------------------------------------------------------------------------
+
             //------------------------------------------------------------------------
             <View
                 android:layout_marginTop="10dp"
@@ -833,6 +1265,13 @@
                 android:id="@+id/Clear_Order"
                 android:layout_height="wrap_content"
                 android:text="Clear"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:id="@+id/finish_Order"
+                android:layout_height="wrap_content"
+                android:text="billing"
+                android:onClick="billing"/>
 
 </TableLayout>
     </HorizontalScrollView>

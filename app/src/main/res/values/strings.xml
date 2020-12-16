@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Pemesananakso</string>
+    <string name="angka_hint">angka</string>
 </resources>

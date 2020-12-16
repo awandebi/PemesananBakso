@@ -2,6 +2,7 @@ package com.example.pemesananbakso;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,10 +15,11 @@ public class MainActivity extends AppCompatActivity {
             quantityPangsit=0, quantityBaso=0, quantityBTelur=0, quantityAnak=0,
             a,b,c,d,e,f,g,h,i,j;
 
+
     CheckBox cbtea, cbleci, cblemon, cbmshake, cbmineral, cbmie, cbpangsit, cbbaso,cbtelur, cbanak;
     TextView texttea, textleci, textlemon,textshake, textmineral, textmie,textpangsit,textbaso,texttelur,textanak;
-    Button submit, btClear;
-    TextView price, pesan, totalh, jumbay, qy;
+    Button submit,fin, btClear;
+    TextView price, pesan, totalh, jumbay, qy,pjk,tohar;
     //------------------------------------------------------------------------------------------
 
     @Override
@@ -48,14 +50,21 @@ public class MainActivity extends AppCompatActivity {
         texttelur = findViewById(R.id.quantity_BaksoTelur);
         textanak = findViewById(R.id.quantity_BaksoBeranak);
 
+
+
         submit = findViewById(R.id.submitorder);
         btClear = findViewById(R.id.Clear_Order);
+        fin = findViewById(R.id.finish_Order);
 
         price = findViewById(R.id.price_textview);
         pesan = findViewById(R.id.pesanan);
         totalh = findViewById(R.id.harga);
         jumbay = findViewById(R.id.jumlahbayar);
         qy = findViewById(R.id.beli);
+        pjk = findViewById(R.id.ppn);
+        tohar = findViewById(R.id.ttl);
+
+
         //------------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------------
         btClear.setOnClickListener(new View.OnClickListener() {
@@ -137,9 +146,9 @@ public class MainActivity extends AppCompatActivity {
                 View h= findViewById(R.id.in8);
                 View h1= findViewById(R.id.dec8);
                 View h2= findViewById(R.id.quantity_Bakso);
-                c.setVisibility(View.GONE);
-                c1.setVisibility(View.GONE);
-                c2.setVisibility(View.GONE);
+                h.setVisibility(View.GONE);
+                h1.setVisibility(View.GONE);
+                h2.setVisibility(View.GONE);
 
                 cbtelur.setChecked(false);
                 quantityBTelur=0;
@@ -437,8 +446,9 @@ public class MainActivity extends AppCompatActivity {
                 String z= "";
                 String x="";
                 String u="";
-
-                int bayar;
+                String k="";
+                String l="";
+                int bayar, pj, bay;
                 a=quantityT * 15000;
                 b=quantityLc * 25000;
                 c=quantityLm * 25000;
@@ -450,7 +460,13 @@ public class MainActivity extends AppCompatActivity {
                 i=quantityBTelur * 45000;
                 j=quantityAnak * 90000;
                 bayar = a + b + c + d + e + f + g + h + i + j;
+                pj = (bayar/100)*10;
+                bay = bayar + pj ;
+
                 x = String.valueOf(bayar);
+                k = String.valueOf(pj);
+                l = String.valueOf(bay);
+
 
                 if (cbtea.isChecked()) {
 
@@ -545,6 +561,13 @@ public class MainActivity extends AppCompatActivity {
                 price.setText(u);
                 totalh.setText(z);
                 jumbay.setText("Rp"+" "+x+",-");
+                pjk.setText("Rp"+" "+k+",-");
+                tohar.setText("Rp"+" "+l+",-");
+
+
+
+
+
 
             }
 
@@ -781,6 +804,11 @@ public class MainActivity extends AppCompatActivity {
 
         quantityAnak = quantityAnak-1;
         display10(quantityAnak);
+    }
+
+    public void billing(View view) {
+        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+        startActivity(intent);
     }
 
 //--------------------------------------------------------------------------------------------------
