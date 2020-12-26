@@ -1010,12 +1010,24 @@
                 android:background="@color/colorAccent"/>
 
             //------------------------------------------------------------------------
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
             <Button
                 android:layout_width="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="35dp"
                 android:id="@+id/submitorder"
                 android:layout_height="wrap_content"
-                android:text="Submit Order And Check BiLL"/>
+                android:text="Masukan pesanan"
+                android:layout_gravity="center"
+                android:textSize="25sp"/>
+
+
+            </LinearLayout>
+
             //------------------------------------------------------------------------
             <TextView
                 android:layout_width="wrap_content"
@@ -1120,7 +1132,7 @@
                     android:layout_height="wrap_content"
                     android:text="Total Harga Pesanan"
                     android:textSize="35sp"
-                    android:layout_gravity="center"
+                    android:layout_gravity="right"
 
                     />
                 <TextView
@@ -1129,7 +1141,7 @@
                     android:layout_height="wrap_content"
                     android:text="Rp 0,-"
                     android:textSize="35sp"
-                    android:layout_gravity="center"
+                    android:layout_gravity="left"
                     android:id="@+id/jumlahbayar"
                     />
             </TableRow>
@@ -1145,7 +1157,7 @@
                     android:layout_height="wrap_content"
                     android:text="PPN 10%"
                     android:textSize="35sp"
-                    android:layout_gravity="center"
+                    android:layout_gravity="right"
 
                     />
                 <TextView
@@ -1154,7 +1166,7 @@
                     android:layout_height="wrap_content"
                     android:text="Rp 0,-"
                     android:textSize="35sp"
-                    android:layout_gravity="center"
+                    android:layout_gravity="left"
                     android:id="@+id/ppn"
                     />
             </TableRow>
@@ -1169,7 +1181,7 @@
                     android:layout_height="wrap_content"
                     android:text="total Bayar"
                     android:textSize="35sp"
-                    android:layout_gravity="center"
+                    android:layout_gravity="right"
 
                     />
                 <TextView
@@ -1178,60 +1190,27 @@
                     android:layout_height="wrap_content"
                     android:text="Rp 0,-"
                     android:textSize="35sp"
-                    android:layout_gravity="center"
+                    android:layout_gravity="left"
                     android:id="@+id/ttl"
                     />
             </TableRow>
+
+
+
+
+
             //------------------------------------------------------------------------
-            <TableRow
-                android:layout_width="match_parent"
+
+            //------------------------------------------------------------------------
+            <TextView
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_column="3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Pembayaran"
-                    android:textSize="35sp"
-                    android:layout_gravity="center"
-
-                    />
-                <EditText
-                    android:id="@+id/pembyr"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/angka_hint"
-                    android:inputType="number" />
-
-            </TableRow>
-            //------------------------------------------------------------------------
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_column="3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Kembali"
-                    android:textSize="35sp"
-                    android:layout_gravity="center"
-
-                    />
-                <TextView
-                    android:layout_column="4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Rp 0,-"
-                    android:textSize="35sp"
-                    android:layout_gravity="center"
-                    android:id="@+id/kmbl"
-                    />
-            </TableRow>
-
-
-            //------------------------------------------------------------------------
-
+                android:text="Rp 0,-"
+                android:textSize="35sp"
+                android:layout_gravity="center"
+                android:id="@+id/hitung"
+                />
 
             //------------------------------------------------------------------------
 
@@ -1259,20 +1238,39 @@
                 android:layout_height="2dp"
                 android:background="@color/colorAccent"/>
             //------------------------------------------------------------------------
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
             <Button
+                android:layout_column="3"
                 android:layout_width="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="35dp"
                 android:id="@+id/Clear_Order"
                 android:layout_height="wrap_content"
-                android:text="Clear"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:id="@+id/finish_Order"
-                android:layout_height="wrap_content"
-                android:text="billing"
-                android:onClick="billing"/>
+                android:background="@color/colorAccent"
+                android:layout_gravity="center"
+                android:text="Clear"
+                android:textSize="25sp"/>
 
-</TableLayout>
+            <Button
+                android:layout_column="4"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="35dp"
+                android:id="@+id/buyer"
+                android:layout_height="wrap_content"
+                android:background="@color/red"
+                android:layout_gravity="center"
+                android:text="Bayar"
+                android:textSize="25sp"/>
+            </TableRow>
+
+
+
+
+
+
+
+        </TableLayout>
     </HorizontalScrollView>
         </ScrollView>

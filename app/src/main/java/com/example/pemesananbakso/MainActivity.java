@@ -15,12 +15,14 @@ public class MainActivity extends AppCompatActivity {
             quantityPangsit=0, quantityBaso=0, quantityBTelur=0, quantityAnak=0,
             a,b,c,d,e,f,g,h,i,j;
 
-
     CheckBox cbtea, cbleci, cblemon, cbmshake, cbmineral, cbmie, cbpangsit, cbbaso,cbtelur, cbanak;
     TextView texttea, textleci, textlemon,textshake, textmineral, textmie,textpangsit,textbaso,texttelur,textanak;
-    Button submit,fin, btClear;
-    TextView price, pesan, totalh, jumbay, qy,pjk,tohar;
+    Button submit,buy, btClear;
+    TextView price, pesan, totalh, jumbay, qy,pjk,tohar, hitung;
+
     //------------------------------------------------------------------------------------------
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,15 +56,15 @@ public class MainActivity extends AppCompatActivity {
 
         submit = findViewById(R.id.submitorder);
         btClear = findViewById(R.id.Clear_Order);
-        fin = findViewById(R.id.finish_Order);
-
-        price = findViewById(R.id.price_textview);
+        buy = findViewById(R.id.buyer);
         pesan = findViewById(R.id.pesanan);
+        qy = findViewById(R.id.beli);
+        price = findViewById(R.id.price_textview);
         totalh = findViewById(R.id.harga);
         jumbay = findViewById(R.id.jumlahbayar);
-        qy = findViewById(R.id.beli);
         pjk = findViewById(R.id.ppn);
         tohar = findViewById(R.id.ttl);
+        hitung = findViewById(R.id.hitung);
 
 
         //------------------------------------------------------------------------------------------
@@ -177,6 +179,46 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+
+
+        buy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    String pesanan=pesan.getText().toString();
+                    String kuantitas=qy.getText().toString();
+                    String HargaSatuan=price.getText().toString();
+                    String HargaBeli= totalh.getText().toString();
+                    String TotalHarga = jumbay.getText().toString();
+                    String pajak = pjk.getText().toString();
+                    String JumlahBayar = tohar.getText().toString();
+                    String Hitung = hitung.getText().toString();
+
+                      Intent intent = new Intent(MainActivity.this,MainActivity2.class);
+
+                        intent.putExtra("menu",pesanan);
+                        intent.putExtra("kuantitas", kuantitas);
+                        intent.putExtra("HargaSatuan", HargaSatuan);
+                        intent.putExtra("HargaBeli", HargaBeli);
+                        intent.putExtra("TotalHarga", TotalHarga);
+                        intent.putExtra("pajak", pajak);
+                        intent.putExtra("JumlahBayar", JumlahBayar);
+                        intent.putExtra("Hitung", Hitung);
+
+                        startActivity(intent);
+
+
+                }catch (Exception e){
+                    e.printStackTrace();
+                    Toast.makeText(getApplication(),"Error Try Again !", Toast.LENGTH_SHORT);
+                }
+
+            }
+        });
+
+
         //------------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------------
 
@@ -448,6 +490,8 @@ public class MainActivity extends AppCompatActivity {
                 String u="";
                 String k="";
                 String l="";
+                String zz = "";
+
                 int bayar, pj, bay;
                 a=quantityT * 15000;
                 b=quantityLc * 25000;
@@ -459,6 +503,7 @@ public class MainActivity extends AppCompatActivity {
                 h=quantityBaso * 45000;
                 i=quantityBTelur * 45000;
                 j=quantityAnak * 90000;
+
                 bayar = a + b + c + d + e + f + g + h + i + j;
                 pj = (bayar/100)*10;
                 bay = bayar + pj ;
@@ -466,7 +511,7 @@ public class MainActivity extends AppCompatActivity {
                 x = String.valueOf(bayar);
                 k = String.valueOf(pj);
                 l = String.valueOf(bay);
-
+                zz = String.valueOf(bay);
 
                 if (cbtea.isChecked()) {
 
@@ -563,7 +608,7 @@ public class MainActivity extends AppCompatActivity {
                 jumbay.setText("Rp"+" "+x+",-");
                 pjk.setText("Rp"+" "+k+",-");
                 tohar.setText("Rp"+" "+l+",-");
-
+                hitung.setText(zz);
 
 
 
@@ -577,9 +622,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+
+
+
+
+
+
     //--------------------------------------------------------------------------------------------------
-    public void display1(int number){
-        TextView quantityTTextView = (TextView) findViewById(R.id.quantity_teh);
+
+    
+
+
+            public void display1(int number){
+        TextView quantityTTextView = findViewById(R.id.quantity_teh);
         quantityTTextView.setText("" + number);
 
     }
@@ -605,7 +661,7 @@ public class MainActivity extends AppCompatActivity {
 
     //--------------------------------------------------------------------------------------------------
     public void display2(int number){
-        TextView quantityLcTextView = (TextView) findViewById(R.id.quantity_leci);
+        TextView quantityLcTextView = findViewById(R.id.quantity_leci);
         quantityLcTextView.setText("" + number);
     }
     public void increment2(View view){//printah Tombol tambah
@@ -627,7 +683,7 @@ public class MainActivity extends AppCompatActivity {
     }
     //--------------------------------------------------------------------------------------------------
     public void display3(int number){
-        TextView quantityLmTextView = (TextView) findViewById(R.id.quantity_lemon);
+        TextView quantityLmTextView = findViewById(R.id.quantity_lemon);
         quantityLmTextView.setText("" + number);
     }
     public void increment3(View view){//printah Tombol tambah
@@ -649,7 +705,7 @@ public class MainActivity extends AppCompatActivity {
     }
     //--------------------------------------------------------------------------------------------------
     public void display4 (int number){
-        TextView quantityMsTextView = (TextView) findViewById(R.id.quantity_shake);
+        TextView quantityMsTextView = findViewById(R.id.quantity_shake);
         quantityMsTextView.setText("" + number);
     }
     public void increment4(View view){//printah Tombol tambah
@@ -671,7 +727,7 @@ public class MainActivity extends AppCompatActivity {
     }
     //--------------------------------------------------------------------------------------------------
     public void display5(int number){
-        TextView quantityMinTextView = (TextView) findViewById(R.id.quantity_mineral);
+        TextView quantityMinTextView = findViewById(R.id.quantity_mineral);
         quantityMinTextView.setText("" + number);
     }
     public void increment5(View view){//printah Tombol tambah
@@ -693,7 +749,7 @@ public class MainActivity extends AppCompatActivity {
     }
     //--------------------------------------------------------------------------------------------------
     public void display6(int number){
-        TextView quantitymieTextView = (TextView) findViewById(R.id.quantity_mie);
+        TextView quantitymieTextView = findViewById(R.id.quantity_mie);
         quantitymieTextView.setText("" + number);
     }
     public void increment6(View view){//printah Tombol tambah
@@ -715,7 +771,7 @@ public class MainActivity extends AppCompatActivity {
     }
     //--------------------------------------------------------------------------------------------------
     public void display7(int number){
-        TextView quantitypangTextView = (TextView) findViewById(R.id.quantity_pangsit);
+        TextView quantitypangTextView = findViewById(R.id.quantity_pangsit);
         quantitypangTextView.setText("" + number);
     }
     public void increment7(View view){//printah Tombol tambah
@@ -737,7 +793,7 @@ public class MainActivity extends AppCompatActivity {
     }
     //--------------------------------------------------------------------------------------------------
     public void display8(int number){
-        TextView quantityBakTextView = (TextView) findViewById(R.id.quantity_Bakso);
+        TextView quantityBakTextView = findViewById(R.id.quantity_Bakso);
         quantityBakTextView.setText("" + number);
     }
     public void increment8(View view){//printah Tombol tambah
@@ -759,7 +815,7 @@ public class MainActivity extends AppCompatActivity {
     }
     //--------------------------------------------------------------------------------------------------
     public void display9(int number){
-        TextView quantitybtTextView = (TextView) findViewById(R.id.quantity_BaksoTelur);
+        TextView quantitybtTextView = findViewById(R.id.quantity_BaksoTelur);
         quantitybtTextView.setText("" + number);
     }
     public void increment9(View view){//printah Tombol tambah
@@ -781,7 +837,7 @@ public class MainActivity extends AppCompatActivity {
     }
     //--------------------------------------------------------------------------------------------------
     public void display10(int number){
-        TextView quantityanTextView = (TextView) findViewById(R.id.quantity_BaksoBeranak);
+        TextView quantityanTextView = findViewById(R.id.quantity_BaksoBeranak);
         quantityanTextView.setText("" + number);
     }
     public void increment10(View view){//printah Tombol tambah
@@ -804,11 +860,6 @@ public class MainActivity extends AppCompatActivity {
 
         quantityAnak = quantityAnak-1;
         display10(quantityAnak);
-    }
-
-    public void billing(View view) {
-        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
-        startActivity(intent);
     }
 
 //--------------------------------------------------------------------------------------------------

@@ -1,14 +1,298 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity2">
+    android:layout_height="wrap_content"
+    android:fillViewport="false">
+    //------------------------------------------------------------------------
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false">
+        //------------------------------------------------------------------------
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:context=".MainActivity"
+            android:stretchColumns="4">
+
+    //------------------------------------------------------------------------
+
+    //------------------------------------------------------------------------
+
+
+    <TableRow
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_column="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menu Pesanan"
+            android:textColor="#212121"
+            android:textSize="25sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jumlah Pesanan  "
+            android:textColor="#212121"
+            android:textSize="25sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Harga Satuan   "
+            android:textColor="#212121"
+            android:textSize="25sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Harga"
+            android:textColor="#212121"
+            android:textSize="25sp"/>
+    </TableRow>
+    //------------------------------------------------------------------------
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorAccent"/>
+
+    //------------------------------------------------------------------------
+
+    <TableRow
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_column="1"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Pesanan"
+            android:textColor="#212121"
+            android:id="@+id/pesanan"
+            android:textSize="25sp"/>
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Unit"
+            android:textColor="#212121"
+            android:id="@+id/beli"
+            android:textSize="25sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rp 0,-"
+            android:textColor="#212121"
+            android:id="@+id/price_textview"
+            android:textSize="25sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rp 0,-"
+            android:textColor="#212121"
+            android:id="@+id/harga"
+            android:textSize="25sp"/>
+    </TableRow>
+
+    //------------------------------------------------------------------------
+
+    //------------------------------------------------------------------------
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorAccent"/>
+
+    //------------------------------------------------------------------------
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_column="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Harga Pesanan"
+            android:textSize="35sp"
+            android:layout_gravity="right"
+
+            />
+        <TextView
+            android:layout_column="4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp 0,-"
+            android:textSize="35sp"
+            android:layout_gravity="left"
+            android:id="@+id/jumlahbayar"
+            />
+    </TableRow>
+
+    //------------------------------------------------------------------------
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_column="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PPN 10%"
+            android:textSize="35sp"
+            android:layout_gravity="right"
+
+            />
+        <TextView
+            android:layout_column="4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp 0,-"
+            android:textSize="35sp"
+            android:layout_gravity="left"
+            android:id="@+id/ppn"
+            />
+    </TableRow>
+    //------------------------------------------------------------------------
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_column="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="total Bayar"
+            android:textSize="35sp"
+            android:layout_gravity="right"
+
+            />
+        <TextView
+            android:layout_column="4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp 0,-"
+            android:textSize="35sp"
+            android:layout_gravity="left"
+            android:id="@+id/ttl"
+            />
+    </TableRow>
+    //------------------------------------------------------------------------
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_column="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pembayaran"
+            android:textSize="35sp"
+            android:layout_gravity="right"
+
+            />
+        <EditText
+            android:layout_column="4"
+            android:id="@+id/pembyr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/angka_hint"
+            android:inputType="number"
+            android:textSize="35sp"
+            android:textStyle="bold"/>
+
+    </TableRow>
+    //------------------------------------------------------------------------
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_column="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kembali"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:layout_gravity="right"
+
+            />
+        <TextView
+            android:layout_column="4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp 0,-"
+            android:textSize="35sp"
+            android:layout_gravity="left"
+            android:id="@+id/kmbl"
+            />
+    </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <Button
+                android:layout_column="4"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:id="@+id/pembayaran"
+                android:layout_height="wrap_content"
+                android:text="Hitung Kembalian"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <Button
+                    android:layout_column="4"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:id="@+id/kembalikemenu"
+                    android:layout_height="wrap_content"
+                    android:text="Menu Utama"/>
+
+
+
+            </TableRow>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35sp"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:id="@+id/terimaksaih"
+                />
+            </LinearLayout>
 
 
 
 
+
+
+
+
+
+            <TextView
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp 0,-"
+                android:textSize="25sp"
+                android:layout_gravity="center"
+                android:id="@+id/hitung"
+                />
 
 
 </TableLayout>
+    </HorizontalScrollView>
+</ScrollView>
